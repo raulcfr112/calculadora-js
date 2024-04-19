@@ -1,0 +1,6 @@
+language: node.js
+before_script:
+  - export DISPLAY=:99.0
+services:
+  - xvfb
+node_js: "7.4.0"
