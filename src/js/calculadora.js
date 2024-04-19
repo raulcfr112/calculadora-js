@@ -1,34 +1,20 @@
 var Calculadora = {
-    adicionar: function (num1, num2) {
-        if (isNaN(num1) || isNaN(num2)) {
+    calcular: function (num1, num2, operacao) {
+        
+        var resultado;
+        
+        if(isNaN(num1) || isNaN(num2)){
             return 0;
-
         }
-        return eval(`${num1} + ${num2}`);
-    },
-    subtrair: function (num1, num2) {
-        if (isNaN(num1) || isNaN(num2)) {
-            return 0;
-
-        }
-        return num1 - num2;
-    },
-    dividir: function (num1, num2) {
-        if (isNaN(num1) || isNaN(num2)) {
-            return 0;
-
-        }
-        if (num1 === 0 || num2 === 0) {
+        
+        resultado = eval(num1 + operacao + num2);
+        
+        if(resultado == 'Infinity'){
             return 'Erro'
-
         }
-        return num1 / num2;
-    },
-    multiplicar: function (num1, num2) {
-        if (isNaN(num1) || isNaN(num2)){
-            return 0;
-        }
-        return num1 * num2;
+        
+        return resultado;
+        
     }
 };
 
